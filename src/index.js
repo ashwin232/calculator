@@ -1,16 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-import "./index.css"
-import App from "./App";
+import Calculator from "./Calculator";
 
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
-/* [Corpus; DOM Rendering] */
-const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-    <React.Fragment>
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>
-    </React.Fragment>
+  <StrictMode>
+    <Calculator />
+  </StrictMode>
 );
